@@ -34,17 +34,17 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
-  projects: [
-    {
-      name: "chromium",
-      use: {
-        ...devices["Desktop Chrome"],
-        width: 1280,
-        height: 720,
-        channel: "chrome",
-      },
+projects: [
+  {
+    name: "chromium",
+    use: {
+      ...devices["Desktop Chrome"],
+      width: 1280,
+      height: 720,
+      channel: "chrome",
+      trace: "on",  // enable trace recording for all tests in this project
     },
-
+  },
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },

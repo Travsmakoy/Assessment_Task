@@ -44,7 +44,7 @@ async function verifyCart(page) {
 
   const cartItems = page.locator(".cart_item");
   const cartCount = await cartItems.count();
-// Verify that the cart count matches the number of selected items
+  // Verify that the cart count matches the number of selected items
   expect(cartCount).toBe(selectedItems.length);
 
   for (let i = 0; i < cartCount; i++) {
